@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px rgba(33, 33, 33, 0.4) solid;
+  padding: 40px 0 40px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.footer__title {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  opacity: 70%;
+  text-align: center;
+}
+
+@media screen and (max-width: 627px) {
+  .footer {
+    max-width: 288px;
+    padding: 60px 0 60px;
+  }
+}
