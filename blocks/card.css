@@ -4,6 +4,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .card__content {
@@ -19,6 +20,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
 }
 
 .card__like-button {
@@ -43,15 +45,12 @@
   .card__content {
     margin-top: 12px;
     width: 288px;
-    height: 18px;
   }
 
   .card__title {
     width: 95px;
-    height: 16px;
     font-size: 16px;
     line-height: 1;
-    font-weight: 500;
     margin: 0;
   }
 }

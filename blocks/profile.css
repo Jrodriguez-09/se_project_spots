@@ -27,6 +27,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  color: #212121;
 }
 
 .profile__description {
@@ -41,6 +42,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  color: #212121;
 }
 
 .profile__edit-button {
@@ -77,6 +79,7 @@
   border-radius: 8px;
   cursor: pointer;
   margin-top: auto;
+  border: none;
 }
 
 .profile__add-button:hover {
@@ -103,6 +106,7 @@
     font-size: 20px;
     margin-bottom: 6px;
     max-width: 288px;
+    line-height: 1;
   }
 
   .profile__description {
@@ -112,7 +116,6 @@
 
   .profile__edit-button {
     justify-content: center;
-    opacity: 70%;
   }
 
   .profile__column {
