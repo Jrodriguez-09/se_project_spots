@@ -32,3 +32,7 @@ Exported images from Figma to tinypng. Helps project to load faster with compres
 ## Deployment
 
 You can access the project here: (https://jrodriguez-09.github.io/se_project_spots/)
+
+## Video
+
+You can access the video here: https://drive.google.com/file/d/1xJO2AwK3YSJ7rvBDXzLWGeK4n_US9vSs/view?usp=share_link
