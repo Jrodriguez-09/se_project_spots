@@ -13,7 +13,7 @@
   padding: 0 20px;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -34,7 +34,7 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  background-image: url(../images/close.png);
+  background-image: url(../images/closebutton.svg);
   border-radius: 2px;
   color: #212121;
   opacity: 40%;
