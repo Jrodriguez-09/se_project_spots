@@ -39,7 +39,10 @@ const editModalDescriptionInput = editModal.querySelector(
 );
 
 const cardModal = document.querySelector("#add-card-modal");
+const cardFormElement = cardModal.querySelector(".modal__form");
 const cardModalCloseButton = cardModal.querySelector(".modal__close-button");
+const cardNameInput = cardModal.querySelector("#add-card-name-input");
+const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
@@ -51,10 +54,21 @@ function getCardElement(data) {
 
   const cardNameElement = cardElement.querySelector(".card__title");
   const cardImageElement = cardElement.querySelector(".card__image");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
+  const cardDeletButton = cardElement.querySelector(".card__delete-button");
 
   cardNameElement.textContent = data.name;
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
+
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_liked");
+  });
+
+  cardDeletButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
   return cardElement;
 }
 
@@ -71,6 +85,15 @@ function handleEditFormSubmit(evt) {
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editModal);
+}
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+  const inputValues = { name: cardNameInput.value, link: cardLinkInput };
+  // add link above^^
+  const cardElement = getCardElement(inputValues);
+  cardsList.prepend(cardElement);
+  closeModal(cardModal);
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -92,6 +115,7 @@ cardModalCloseButton.addEventListener("click", () => {
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
+cardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
