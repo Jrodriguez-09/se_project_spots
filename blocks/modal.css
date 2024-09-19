@@ -195,5 +195,6 @@
 
   .modal__caption {
     border-style: none;
+    font-size: 16px;
   }
 }
