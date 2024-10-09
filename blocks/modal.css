@@ -133,7 +133,7 @@
   border-radius: 8px;
 }
 
-.modal__submit-button-disabled {
+.modal__submit-button_disabled {
   opacity: 50%;
 }
 
