@@ -184,9 +184,9 @@ previewModalCloseButton.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleAddCardSubmit);
 
-initialCards.forEach((item) => {
-  const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
-});
+//initialCards.forEach((item) => {
+//const cardElement = getCardElement(item);
+//cardsList.append(cardElement);
+//});
 
 enableValidation(settings);
