@@ -170,7 +170,6 @@ cardModalButton.addEventListener("click", () => {
 
 avatarModalButton.addEventListener("click", () => {
   openModal(avatarModal);
-  console.log("test");
 });
 
 cardModalCloseButton.addEventListener("click", () => {
