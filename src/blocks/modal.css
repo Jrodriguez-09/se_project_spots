@@ -64,6 +64,15 @@
   background-color: #ffffff;
 }
 
+.modal__close-button_delete {
+  right: -53px;
+  top: 0;
+  border: 2px solid;
+  background-color: transparent;
+  border: none;
+  background-image: url(../images/close-button-white.svg);
+}
+
 .modal__close-button:hover {
   opacity: 100%;
 }

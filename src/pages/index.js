@@ -70,7 +70,7 @@ const deleteModalCancelButton = deleteModal.querySelector(
   ".modal__submit-button_cancel"
 );
 const deleteModalCloseButton = deleteModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button_delete"
 );
 
 // Preview
@@ -270,6 +270,18 @@ cardModalCloseButton.addEventListener("click", () => {
 previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
+
+avatarSubmitButton.addEventListener("click", () => {
+  closeModal(avatarModal);
+});
+
+deleteModalCloseButton.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
+
+//deleteModalCancelButton.addEventListener("click", () => {
+//closeModal(deleteModal);
+//});
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleAddCardSubmit);
