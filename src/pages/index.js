@@ -11,7 +11,7 @@ import { setButtonText } from "../utils/helpers.js";
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "d5ee094d-65cf-4d3a-8db9-806babebd6bb",
+    authorization: "da167ee9-54cf-4983-babd-77f51540bf81",
     "Content-Type": "application/json",
   },
 });
