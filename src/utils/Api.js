@@ -72,8 +72,6 @@ class Api {
       headers: this._headers,
     }).then(this._checkResponse);
   }
-
-  // other methods for working with the API
 }
 
 export default Api;

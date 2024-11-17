@@ -42,6 +42,13 @@
   width: unset;
 }
 
+.modal__delete-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 .modal__close-button {
   position: absolute;
   top: 32px;
@@ -145,6 +152,29 @@
   border: none;
   display: block;
   border-radius: 8px;
+}
+
+.modal__submit-button_delete {
+  background: #ff6565;
+  border-radius: 8px;
+  padding: 18px 32px;
+  color: #212121;
+}
+
+.modal__submit-button_delete:hover {
+  background-color: #ff3333;
+}
+
+.modal__submit-button_cancel {
+  background-color: #fff;
+  padding: 18px 32px;
+  color: #212121;
+  border: 1px solid;
+}
+
+.modal__submit-button_cancel:hover {
+  background-color: #212121;
+  color: #fff;
 }
 
 .modal__caption {

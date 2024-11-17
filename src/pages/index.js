@@ -66,6 +66,12 @@ const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 // Delete
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector(".modal__form");
+const deleteModalCancelButton = deleteModal.querySelector(
+  ".modal__submit-button_cancel"
+);
+const deleteModalCloseButton = deleteModal.querySelector(
+  ".modal__close-button"
+);
 
 // Preview
 const previewModal = document.querySelector("#preview-modal");
@@ -214,12 +220,24 @@ function handleLike(evt, id) {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-  closeModal(cardModal);
-  evt.target.reset();
-  disableButton(cardSubmitButton, settings);
+  const submitButton = evt.submitter;
+  submitButton.textContent = "Saving...";
+  api
+    .addCards({
+      name: cardNameInput.value,
+      link: cardLinkInput.value,
+    })
+    .then((data) => {
+      const cardElement = getCardElement(data);
+      cardsList.prepend(cardElement);
+      closeModal(cardModal);
+      cardFormElement.reset();
+      disableButton(cardSubmitButton, settings);
+    })
+    .catch(console.error)
+    .finally(() => {
+      submitButton.textContent = "Save";
+    });
 }
 
 profileEditButton.addEventListener("click", () => {
