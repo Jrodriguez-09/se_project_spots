@@ -38,8 +38,8 @@
   cursor: pointer;
 }
 
-.profile__avatar-buton::after {
-  content: "Edit Avatar";
+.profile__avatar-button::after {
+  content: "";
 }
 
 .profile__avatar {
@@ -150,7 +150,7 @@
     position: relative;
   }
 
-  .profile__avatar-buton::after {
+  .profile__avatar-button::after {
     content: "";
   }
 
