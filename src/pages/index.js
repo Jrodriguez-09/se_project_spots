@@ -197,7 +197,7 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      submitButton.textContent = "Delete";
+      submitButton.textContent = "Cancel";
     });
 }
 
@@ -279,9 +279,9 @@ deleteModalCloseButton.addEventListener("click", () => {
   closeModal(deleteModal);
 });
 
-//deleteModalCancelButton.addEventListener("click", () => {
-//closeModal(deleteModal);
-//});
+deleteModalCancelButton.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleAddCardSubmit);
