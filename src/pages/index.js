@@ -173,6 +173,7 @@ function handleAvatarSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
   submitButton.textContent = "Saving...";
+  setButtonText(submitButton, true, "Save", "Saving...");
   api
     .editAvatarInfo({ avatar: avatarInput.value })
     .then((data) => {
@@ -189,6 +190,7 @@ function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
   submitButton.textContent = "Deleting...";
+  setButtonText(submitButton, true, "Save", "Saving...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
@@ -222,6 +224,7 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
   submitButton.textContent = "Saving...";
+  setButtonText(submitButton, true, "Save", "Saving...");
   api
     .addCards({
       name: cardNameInput.value,
