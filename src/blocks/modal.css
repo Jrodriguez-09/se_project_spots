@@ -96,6 +96,13 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.modal__title-delete {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__label {
@@ -108,6 +115,7 @@
   font-size: 16px;
   line-height: 17.6px;
   font-weight: 500;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__input {
@@ -118,6 +126,7 @@
   border-radius: 8px;
   opacity: 40%;
   border-bottom: 1px #212121 solid;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__input:hover {
@@ -147,6 +156,7 @@
   line-height: 1;
   font-weight: 500;
   border-radius: 8px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__submit-button_disabled {
@@ -168,6 +178,7 @@
   border-radius: 8px;
   padding: 18px 32px;
   color: #212121;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__submit-button_delete:hover {
@@ -179,6 +190,7 @@
   padding: 18px 32px;
   color: #212121;
   border: 1px solid;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__submit-button_cancel:hover {
