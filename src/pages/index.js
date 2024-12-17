@@ -57,7 +57,7 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 // Avatar
 const avatarModal = document.querySelector("#avatar-modal");
 const avatarFormElement = avatarModal.querySelector(".modal__form");
-const avatarSubmitButton = avatarModal.querySelector(".modal__submit-button");
+//const avatarSubmitButton = avatarModal.querySelector(".modal__submit-button");
 const avatarModalCloseButton = avatarModal.querySelector(
   ".modal__close-button"
 );
@@ -151,7 +151,7 @@ function closeModal(modal) {
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  submitButton.textContent = "Saving...";
+  //submitButton.textContent = "Saving...";
   setButtonText(submitButton, true, "Save", "Saving...");
   api
     .editUserInfo({
@@ -166,13 +166,14 @@ function handleEditFormSubmit(evt) {
     .catch(console.error)
     .finally(() => {
       submitButton.textContent = "Save";
+      // ( possibly state false in the appropriate places as well? )
     });
 }
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  submitButton.textContent = "Saving...";
+  //submitButton.textContent = "Saving...";
   setButtonText(submitButton, true, "Save", "Saving...");
   api
     .editAvatarInfo({ avatar: avatarInput.value })
@@ -189,8 +190,8 @@ function handleAvatarSubmit(evt) {
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  submitButton.textContent = "Deleting...";
-  setButtonText(submitButton, true, "Save", "Saving...");
+  //submitButton.textContent = "Deleting...";
+  setButtonText(submitButton, true, "Delete", "Deleting...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
@@ -199,7 +200,7 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      submitButton.textContent = "Cancel";
+      submitButton.textContent = "Delete";
     });
 }
 
@@ -223,7 +224,7 @@ function handleLike(evt, id) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  submitButton.textContent = "Saving...";
+  //submitButton.textContent = "Saving...";
   setButtonText(submitButton, true, "Save", "Saving...");
   api
     .addCards({
@@ -274,9 +275,9 @@ previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-avatarSubmitButton.addEventListener("click", () => {
-  closeModal(avatarModal);
-});
+//avatarSubmitButton.addEventListener("click", () => {
+// closeModal(avatarModal);
+//});
 
 deleteModalCloseButton.addEventListener("click", () => {
   closeModal(deleteModal);
