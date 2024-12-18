@@ -226,6 +226,14 @@
     width: 100%;
   }
 
+  .modal__container-delete {
+    padding: 12px;
+  }
+
+  .modal__delete-form {
+    display: grid;
+  }
+
   .modal__title {
     font-size: 20px;
     line-height: 1;
@@ -238,9 +246,10 @@
   }
 
   .modal__close-button_delete {
-    background-image: url(../images/closebutton.svg);
+    background-image: url(../images/close-button-white.svg);
     height: 32px;
     width: 32px;
+    top: -40px;
   }
 
   .modal__close-button_type_preview {
@@ -257,10 +266,6 @@
   .modal__input {
     font-size: 16px;
     line-height: 1;
-  }
-
-  .modal__submit-button {
-    width: 100%;
   }
 
   .modal__image {
