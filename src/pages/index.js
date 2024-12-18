@@ -166,6 +166,7 @@ function handleEditFormSubmit(evt) {
     .catch(console.error)
     .finally(() => {
       submitButton.textContent = "Save";
+      setButtonText(submitButton, false, "Save", "Saving...");
       // ( replace here also with setButton?- in all places )
       // ( possibly state false in the appropriate places as well? )
     });
@@ -185,6 +186,7 @@ function handleAvatarSubmit(evt) {
     .catch(console.error)
     .finally(() => {
       submitButton.textContent = "Save";
+      setButtonText(submitButton, false, "Save", "Saving...");
     });
 }
 
@@ -202,6 +204,7 @@ function handleDeleteSubmit(evt) {
     .catch(console.error)
     .finally(() => {
       submitButton.textContent = "Delete";
+      setButtonText(submitButton, false, "Delete", "Deleting...");
     });
 }
 
@@ -242,6 +245,7 @@ function handleAddCardSubmit(evt) {
     .catch(console.error)
     .finally(() => {
       submitButton.textContent = "Save";
+      setButtonText(submitButton, false, "Save", "Saving...");
     });
 }
 
