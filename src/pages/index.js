@@ -151,7 +151,6 @@ function closeModal(modal) {
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  //submitButton.textContent = "Saving...";
   setButtonText(submitButton, true, "Save", "Saving...");
   api
     .editUserInfo({
@@ -165,17 +164,13 @@ function handleEditFormSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      submitButton.textContent = "Save";
       setButtonText(submitButton, false, "Save", "Saving...");
-      // ( replace here also with setButton?- in all places )
-      // ( possibly state false in the appropriate places as well? )
     });
 }
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  //submitButton.textContent = "Saving...";
   setButtonText(submitButton, true, "Save", "Saving...");
   api
     .editAvatarInfo({ avatar: avatarInput.value })
@@ -185,7 +180,6 @@ function handleAvatarSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      submitButton.textContent = "Save";
       setButtonText(submitButton, false, "Save", "Saving...");
     });
 }
@@ -193,7 +187,6 @@ function handleAvatarSubmit(evt) {
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  //submitButton.textContent = "Deleting...";
   setButtonText(submitButton, true, "Delete", "Deleting...");
   api
     .deleteCard(selectedCardId)
@@ -203,7 +196,6 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      submitButton.textContent = "Delete";
       setButtonText(submitButton, false, "Delete", "Deleting...");
     });
 }
@@ -228,7 +220,6 @@ function handleLike(evt, id) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
-  //submitButton.textContent = "Saving...";
   setButtonText(submitButton, true, "Save", "Saving...");
   api
     .addCards({
@@ -244,7 +235,6 @@ function handleAddCardSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      submitButton.textContent = "Save";
       setButtonText(submitButton, false, "Save", "Saving...");
     });
 }
