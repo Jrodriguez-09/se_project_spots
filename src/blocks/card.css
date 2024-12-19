@@ -63,9 +63,11 @@
 }
 
 .card__like-button_liked {
-  background-image: url("../images/heart-liked.svg");
+  background-image: url("../images/heart-like.svg");
   opacity: 1;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .card__like-button_liked:hover {
